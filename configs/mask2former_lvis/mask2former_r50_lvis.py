@@ -1,6 +1,6 @@
 _base_ = ['./mask2former_r50_lvis_base.py']
 
-num_things_classes = 1203
+num_things_classes = 97
 num_stuff_classes = 0
 num_classes = num_things_classes + num_stuff_classes
 model = dict(
@@ -57,14 +57,14 @@ test_pipeline = [
         ])
 ]
 dataset_type = 'LVISOWNDataset'
-data_root = 'data/lvis_v1/'
+data_root = 'data/lvis_v1_subdataset/'
 data = dict(
     _delete_=True,
     samples_per_gpu=2,
     workers_per_gpu=2,
     train=dict(
         type=dataset_type,
-        ann_file=data_root + 'annotations/lvis_v1_subset_train_v1.json',
+        ann_file=data_root + 'annotations/lvis_v1_train.json',
         img_prefix=data_root ,
         pipeline=train_pipeline),
     val=dict(
