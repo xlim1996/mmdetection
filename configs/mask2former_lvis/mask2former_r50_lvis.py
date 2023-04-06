@@ -1,6 +1,6 @@
 _base_ = ['./mask2former_r50_lvis_base.py']
 
-num_things_classes = 97
+num_things_classes = 100
 num_stuff_classes = 0
 num_classes = num_things_classes + num_stuff_classes
 model = dict(
@@ -14,7 +14,7 @@ model = dict(
     test_cfg=dict(panoptic_on=False))
 
 # dataset settings
-image_size = (120, 120)
+image_size = (1024, 1024)
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
 pad_cfg = dict(img=(128, 128, 128), masks=0, seg=255)

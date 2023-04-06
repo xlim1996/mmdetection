@@ -1,7 +1,7 @@
 _base_ = [
     '../_base_/datasets/lvis_own_instance.py', '../_base_/default_runtime.py'
 ]
-num_things_classes = 1203
+num_things_classes = 100
 num_stuff_classes = 0
 num_classes = num_things_classes + num_stuff_classes
 model = dict(
@@ -187,7 +187,7 @@ test_pipeline = [
         ])
 ]
 # dataset_type = 'LVISOWNDataset'
-data_root = 'data/lvis_v1/'
+data_root = 'data/lvis_v1_subdataset/'
 data = dict(
     samples_per_gpu=2,
     workers_per_gpu=2,
