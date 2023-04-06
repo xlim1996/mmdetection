@@ -140,7 +140,7 @@ model = dict(
     init_cfg=None)
 
 # dataset settings
-image_size = (120, 120)
+image_size = (1024, 1024)
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
 train_pipeline = [
@@ -189,8 +189,8 @@ test_pipeline = [
 # dataset_type = 'LVISOWNDataset'
 data_root = 'data/lvis_v1_subdataset/'
 data = dict(
-    samples_per_gpu=2,
-    workers_per_gpu=2,
+    samples_per_gpu=10,
+    workers_per_gpu=10,
     train=dict(pipeline=train_pipeline),
     val=dict(
         pipeline=test_pipeline,

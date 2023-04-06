@@ -1,7 +1,7 @@
 #! /bin/bash
 
 links=(
-"https://sandbox.zenodo.org/record/1181243/files/data.zip?download=1"
+"https://sandbox.zenodo.org/record/1181385/files/data.zip?download=1"
 )
 
 for i in "${links[@]}"
