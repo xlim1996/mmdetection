@@ -189,8 +189,8 @@ test_pipeline = [
 # dataset_type = 'LVISOWNDataset'
 data_root = 'data/lvis_v1_subdataset/'
 data = dict(
-    samples_per_gpu=10,
-    workers_per_gpu=10,
+    samples_per_gpu=2,
+    workers_per_gpu=2,
     train=dict(pipeline=train_pipeline),
     val=dict(
         pipeline=test_pipeline,
